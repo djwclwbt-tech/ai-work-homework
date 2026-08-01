@@ -1,17 +1,1 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI Work Curriculum — Rebuild in Progress</title>
-  <style>
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:#08101f;color:#f4f7ff;display:grid;place-items:center;min-height:100vh;padding:24px}main{max-width:720px;background:#121a2c;border:1px solid #2c3657;border-radius:20px;padding:24px;box-shadow:0 18px 60px rgba(0,0,0,.35)}h1{font-size:clamp(30px,8vw,54px);line-height:.95;margin:0 0 16px;letter-spacing:-.05em}p,li{color:#b8c3df;line-height:1.5}.status{color:#ffd166;font-weight:800;text-transform:uppercase;font-size:13px;letter-spacing:.08em}.bad{color:#ff8199}.good{color:#8ee8b0;font-weight:800}</style>
-</head>
-<body><main>
-<p class="status">Rebuild in progress</p>
-<h1>This first version was too shallow.</h1>
-<p>The generic 7-card AI homework prototype has been pulled from primary use. It is being rebuilt around Dylan's actual work context: cybersecurity sales/account workflows, Morgan/Claude Code, CRM/Gmail/transcripts/product docs, fail-loud architecture, source-of-truth rules, QA gates, and AI-assisted product development.</p>
-<p class="good">Next version: phone-first lessons + sandbox labs + iPad visual demos + project-specific reps.</p>
-<p class="bad">Do not use this placeholder as the curriculum.</p>
-</main></body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Dylan's Work AI Curriculum</title><link rel="stylesheet" href="styles.css"></head><body><header><p class="eyebrow">Cybersecurity work AI · Morgan operator curriculum</p><h1>Learn AI through your actual work system.</h1><p class="lead">Not generic prompt tips. Phone-first lessons and sandbox labs for understanding AI, directing Morgan/Claude Code, QAing AI-built workflows, and applying AI safely in cybersecurity account work.</p><nav><button data-tab="learn">Learn</button><button data-tab="labs">Labs</button><button data-tab="map">System Map</button></nav></header><main><section id="learn" class="tab active"><div id="modules"></div></section><section id="labs" class="tab"><div class="lab-layout"><aside id="labList"></aside><article id="labDetail"></article></div></section><section id="map" class="tab"><div class="card"><h2>Morgan system map</h2><div class="flow"><div><b>Sources</b><span>Salesforce</span><span>Gmail / Calendar</span><span>Call transcripts</span><span>Product docs</span><span>Usage data</span></div><div><b>Pass 1</b><span>Gather</span><span>Distill</span><span>Label sources</span><span>Mark missing/stale</span></div><div><b>Pass 2</b><span>Reason</span><span>Recommend</span><span>Draft</span><span>Grade</span></div><div><b>QA Gate</b><span>Evidence</span><span>Fail loud</span><span>Acceptance criteria</span><span>Rollback</span></div></div><p class="note">Core law: source systems own facts; Morgan reasons over fresh evidence and labels inference. Background scripts are deterministic. Judgment-heavy AI runs in-session unless proven safe.</p></div></section></main><script src="app.js"></script></body></html>
