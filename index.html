@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Work Homework</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <p class="eyebrow">Dylan's AI Work Sprint</p>
+    <h1>Phone-first homework</h1>
+    <p class="subhead">Sandboxed work drills with answer keys, rubrics, and perfect-data feedback. No Telegram. No real work data required.</p>
+  </header>
+
+  <main class="app-shell">
+    <section class="card progress-card" aria-labelledby="progressTitle">
+      <h2 id="progressTitle">Progress</h2>
+      <div id="progressSummary" class="progress-summary">Loading…</div>
+      <div class="progress-bar" aria-hidden="true"><span id="progressBar"></span></div>
+    </section>
+
+    <section class="card lesson-card" aria-labelledby="lessonTitle">
+      <div id="lessonMeta" class="lesson-meta">Loading lesson…</div>
+      <h2 id="drillTitle">Loading…</h2>
+      <div id="drillBody" class="drill-body"></div>
+    </section>
+
+    <section class="card answer-card" aria-labelledby="answerTitle">
+      <h2 id="answerTitle">Your rep</h2>
+      <p class="hint">Draft your answer here. It stays in this browser unless you copy/share it.</p>
+      <textarea id="answerInput" rows="9" placeholder="Write your work output or prompt here…"></textarea>
+      <div class="button-row">
+        <button id="saveAnswerBtn" type="button">Save draft</button>
+        <button id="showFeedbackBtn" type="button" class="secondary">Show feedback</button>
+        <button id="markCompleteBtn" type="button" class="complete">Mark complete</button>
+      </div>
+      <div id="feedbackPanel" class="feedback-panel" hidden></div>
+    </section>
+
+    <aside class="card drill-list-card" aria-labelledby="drillListTitle">
+      <h2 id="drillListTitle">7-day sprint</h2>
+      <div id="drillList" class="drill-list"></div>
+    </aside>
+  </main>
+
+  <footer class="app-footer">
+    <p>Use phone for homework. Use iPad for longer video/demo review.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

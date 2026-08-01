@@ -1,0 +1,156 @@
+:root {
+  color-scheme: dark;
+  --bg: #08101f;
+  --panel: #121a2c;
+  --panel-2: #182239;
+  --text: #f4f7ff;
+  --muted: #aeb8d2;
+  --blue: #7cc4ff;
+  --green: #8ee8b0;
+  --yellow: #ffd166;
+  --red: #ff8199;
+  --line: #2c3657;
+  --shadow: rgba(0, 0, 0, .28);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #1c315b, transparent 34rem), linear-gradient(160deg, #07101f, #11172b 65%, #190f25);
+  color: var(--text);
+}
+
+.app-header,
+.app-footer {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 22px 16px 8px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(31px, 11vw, 56px);
+  letter-spacing: -.06em;
+  line-height: .94;
+}
+
+h2 { margin: 0 0 10px; font-size: 20px; }
+h3 { margin: 18px 0 8px; font-size: 15px; color: var(--blue); }
+p, li { color: var(--muted); line-height: 1.45; }
+
+.subhead { max-width: 720px; font-size: 16px; }
+
+.app-shell {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+  padding: 12px 12px 28px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.card {
+  background: rgba(18, 26, 44, .92);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 15px;
+  box-shadow: 0 16px 50px var(--shadow);
+}
+
+.lesson-meta {
+  color: var(--yellow);
+  font-weight: 800;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.data-packet,
+.prompt-box,
+.ideal-answer,
+.rubric-box {
+  background: #07101f;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  white-space: pre-wrap;
+}
+
+.prompt-box { border-color: #315d85; }
+.ideal-answer { border-color: #2d6848; }
+.rubric-box { border-color: #6b5830; }
+
+textarea {
+  width: 100%;
+  margin-top: 8px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #070c18;
+  color: var(--text);
+  padding: 12px;
+  resize: vertical;
+  font: inherit;
+}
+
+.button-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 9px;
+  margin-top: 10px;
+}
+
+button {
+  min-height: 46px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--blue);
+  color: #05101e;
+  font-weight: 900;
+  font-size: 15px;
+}
+
+button.secondary { background: #d9e7ff; }
+button.complete { background: var(--green); }
+button.drill-button {
+  width: 100%;
+  text-align: left;
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid var(--line);
+  margin-bottom: 8px;
+  padding: 12px;
+}
+button.drill-button.active { border-color: var(--blue); box-shadow: inset 0 0 0 1px var(--blue); }
+button.drill-button.done::after { content: " ✓"; color: var(--green); }
+
+.feedback-panel {
+  margin-top: 13px;
+  display: grid;
+  gap: 12px;
+}
+
+.progress-summary { color: var(--muted); margin-bottom: 10px; }
+.progress-bar { height: 10px; border-radius: 999px; background: #07101f; border: 1px solid var(--line); overflow: hidden; }
+.progress-bar span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--blue), var(--green)); }
+
+.hint { margin-top: 0; font-size: 14px; }
+
+.app-footer { padding-bottom: 28px; }
+
+@media (min-width: 760px) {
+  .app-shell { grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr); align-items: start; }
+  .progress-card, .lesson-card, .answer-card { grid-column: 1; }
+  .drill-list-card { grid-column: 2; grid-row: 1 / span 3; position: sticky; top: 12px; }
+  .button-row { grid-template-columns: repeat(3, 1fr); }
+}
